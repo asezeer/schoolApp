@@ -14,16 +14,8 @@ import javax.persistence.*;
 public class Class {
 
     @Id
-    @GeneratedValue
-    @Column(name = "id")
-    private int id;
-
-    @Column(name = "name")
-    private String name;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "student_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private Student student;
+    Long id;
+    String name;
+    Long studentId;
 }
+
